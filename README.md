@@ -1,4 +1,4 @@
-# SyncPilot community
+# SyncPilot
 
 Experimental Python tooling for document and mission handoffs between ChatGPT Work and Codex. The original maintainer has stopped active development; contributors are welcome to fork or continue the project under the MIT license.
 
@@ -25,8 +25,8 @@ The external pilot authenticates those native observations. Hashes verify bytes;
 
 Requirements: Python 3.10+, Git, standard library only. Tests use synthetic projects and fake application observations.
 
-    git clone https://github.com/Nathan71500/SyncPilot-community.git
-    cd SyncPilot-community
+    git clone https://github.com/Nathan71500/SyncPilot.git
+    cd SyncPilot
     python -X utf8 -m unittest discover -s tests -v
     python -X utf8 tests/package_check.py
     python -X utf8 tools/build_package.py
