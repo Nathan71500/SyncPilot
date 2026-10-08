@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+.local/
+reports/
+.codex-remote-attachments/
+.env
+.env.*
+project-sync.json

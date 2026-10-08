@@ -1,0 +1,20 @@
+{
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "SyncPilot",
+    "shortDescription": "Sync documentaire par projet",
+    "longDescription": "Décisions validées Work ↔ Codex, y compris orales ; DC principal, Drive seulement si DC indisponible, conflits bloqués et preuve indépendante.",
+    "developerName": "Pilotage IA",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Utilise SyncPilot pour ce projet : lis son AGENTS.md et son contrat project-sync.json, vérifie le dépôt, le commit, le périmètre et la destination avant de préparer ou contrôler la synchronisation."
+  },
+  "name": "syncpilot",
+  "version": "0.6.5",
+  "description": "Décisions validées et documents Work ↔ Codex, contrat par projet et preuve indépendante.",
+  "author": {
+    "name": "Pilotage IA"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

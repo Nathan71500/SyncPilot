@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "project_id": "replace-project",
+  "repository": null,
+  "reference_branch": null,
+  "destination": "REPLACE_AUTHENTICATED_WORK_PROJECT_ID",
+  "authority": "REPLACE_QUALIFIED_MANDATE",
+  "shared_sources": [
+    "AGENTS.md"
+  ],
+  "domains": {
+    "documentation": [
+      "docs/INDEX.md"
+    ]
+  },
+  "transport": {
+    "primary": {
+      "channel": "desktop-commander",
+      "locator": "REPLACE_DC_DEVICE_AND_ENCODED_ABSOLUTE_ROOT",
+      "account": "REPLACE_OBSERVED_DC_ACCOUNT"
+    },
+    "fallback": {
+      "channel": "drive",
+      "locator": "REPLACE_GDRIVE_FOLDER_LOCATOR",
+      "account": "REPLACE_OBSERVED_DRIVE_ACCOUNT"
+    },
+    "policy": {
+      "fallback_on": [
+        "desktop-commander-unavailable"
+      ],
+      "uncertain_reception": "collect-before-resume",
+      "validation_rejected": "block",
+      "resume": "same-operation"
+    },
+    "persistence": {
+      "desktop_commander": "external-folder",
+      "drive": "external-folder",
+      "work_sources": "explicit-ingestion-required"
+    }
+  },
+  "decision_sync": {
+    "participants": {
+      "work": {
+        "project_id": "REPLACE_AUTHENTICATED_WORK_PROJECT_ID",
+        "thread_id": "REPLACE_WORK_THREAD"
+      },
+      "codex": {
+        "project_id": "REPLACE_CODEX_PROJECT_OR_QUALIFIED_WORKSPACE",
+        "thread_id": "REPLACE_CODEX_THREAD"
+      }
+    },
+    "sources": {
+      "work": [
+        "REPLACE_WORK_SOURCE_REFERENCE"
+      ],
+      "codex": [
+        "REPLACE_CODEX_SOURCE_REFERENCE"
+      ]
+    },
+    "registries": {
+      "work": "REPLACE_DURABLE_WORK_REGISTRY",
+      "codex": "REPLACE_DURABLE_CODEX_REGISTRY"
+    },
+    "policy": {
+      "capture": "human-validated-only",
+      "oral": "preserve-existing-validation",
+      "conflicts": "block-and-arbitrate",
+      "git": "review-before-integration",
+      "new_project": "recommend-if-work-and-codex"
+    }
+  }
+}

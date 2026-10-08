@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "project_id": "replace-project",
+  "repository": "REPLACE_EXACT_ORIGIN_REMOTE",
+  "reference_branch": "REPLACE_CANONICAL_BRANCH",
+  "destination": "REPLACE_AUTHENTICATED_WORK_PROJECT_ID",
+  "authority": "REPLACE_QUALIFIED_MANDATE",
+  "shared_sources": [
+    "AGENTS.md"
+  ],
+  "domains": {
+    "documentation": [
+      "docs/INDEX.md"
+    ]
+  },
+  "transport": {
+    "primary": {
+      "channel": "desktop-commander",
+      "locator": "REPLACE_DC_DEVICE_AND_ENCODED_ABSOLUTE_ROOT",
+      "account": "REPLACE_OBSERVED_DC_ACCOUNT"
+    },
+    "fallback": {
+      "channel": "drive",
+      "locator": "REPLACE_GDRIVE_FOLDER_LOCATOR",
+      "account": "REPLACE_OBSERVED_DRIVE_ACCOUNT"
+    },
+    "policy": {
+      "fallback_on": [
+        "desktop-commander-unavailable"
+      ],
+      "uncertain_reception": "collect-before-resume",
+      "validation_rejected": "block",
+      "resume": "same-operation"
+    },
+    "persistence": {
+      "desktop_commander": "external-folder",
+      "drive": "external-folder",
+      "work_sources": "explicit-ingestion-required"
+    }
+  }
+}
